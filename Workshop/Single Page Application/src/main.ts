@@ -1,9 +1,7 @@
 import './style.css'
+import { HtmlUtil } from './utils/html'
 
 
-document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
-  <div>
-    <h1> Hello, TS Workshop!</h1> 
-  </div>
-`
 
+const app = document.querySelector<HTMLDivElement>('#app')
+HtmlUtil.render(app)

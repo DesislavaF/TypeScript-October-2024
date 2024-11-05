@@ -1,0 +1,1 @@
+export const userPage = `<div>Hello, from Users page!</div>`

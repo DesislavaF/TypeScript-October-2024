@@ -1,0 +1,1 @@
+export const PostPage = `<div>Hello, from post page!</div>`

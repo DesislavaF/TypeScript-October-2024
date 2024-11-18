@@ -3,7 +3,7 @@ export class PostService {
 
     async fetchPostById(id: string) {
         const url = `${this.baseUrl}/post/${id}`;
-        // Подобна логика за fetchByUrl
+
         console.log(`Fetching post with ID: ${id}`);
     }
 }

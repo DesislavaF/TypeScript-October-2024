@@ -7,10 +7,10 @@ import { HtmlUtil } from './utils/html';
 const { baseURL } = CONFIG;
 
 const userService = new UserService(baseURL);
-userService.fetchPosts(); // Пример за извикване на метод
+userService.fetchPosts(); 
 
 const postService = new PostService(baseURL);
-postService.fetchPostById('1'); // Примерен метод за пост
+postService.fetchPostById('1'); 
 
 const app = document.querySelector<HTMLDivElement>('#app');
 

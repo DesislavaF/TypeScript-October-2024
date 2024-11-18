@@ -6,7 +6,7 @@ export class UserService {
     async fetchPosts() {
         const url = `${this.baseUrl}/post`;
         try {
-            const result = await fetchByUrl(url); // Асинхронна заявка
+            const result = await fetchByUrl(url);
             console.log(result);
         } catch (error) {
             console.error("Error fetching posts:", error);

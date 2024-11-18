@@ -1,10 +1,15 @@
 import { fetchByUrl } from "../utils/http";
 
-
 export class UserService {
-    constructor(baseUrl: string) {
-        const url = `${baseUrl}/users`;
-        const result = fetchByUrl(url)
-        console.log(result)
+    constructor(private baseUrl: string) {}
+
+    async fetchPosts() {
+        const url = `${this.baseUrl}/post`;
+        try {
+            const result = await fetchByUrl(url); // Асинхронна заявка
+            console.log(result);
+        } catch (error) {
+            console.error("Error fetching posts:", error);
+        }
     }
 }

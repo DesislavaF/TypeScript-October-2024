@@ -1,13 +1,21 @@
-import {  PostService } from "./service/post";
+import { PostService } from "./service/post";
 import { CONFIG } from './constant';
 import { UserService } from "./service/user";
-import './style.css'
-import { HtmlUtil } from './utils/html'
+import './style.css';
+import { HtmlUtil } from './utils/html';
 
 const { baseURL } = CONFIG;
-const userService = new UserService(baseURL);
-const postService = new PostService(baseURL);
-UserService;
 
-const app = document.querySelector<HTMLDivElement>('#app')
-HtmlUtil.render(app)
+const userService = new UserService(baseURL);
+userService.fetchPosts(); // Пример за извикване на метод
+
+const postService = new PostService(baseURL);
+postService.fetchPostById('1'); // Примерен метод за пост
+
+const app = document.querySelector<HTMLDivElement>('#app');
+
+if (app) {
+    HtmlUtil.render(app);
+} else {
+    console.error("Element #app not found.");
+}

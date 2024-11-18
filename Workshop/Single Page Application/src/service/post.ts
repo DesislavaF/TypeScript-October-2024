@@ -1,10 +1,9 @@
-import { fetchByUrl } from "../utils/http";
+export class PostService {
+    constructor(private baseUrl: string) {}
 
-
-export class UserService {
-    constructor(baseUrl: string) {
-        const url = `${baseUrl}/posts`;
-        const result = fetchByUrl(url)
-        console.log(result)
+    async fetchPostById(id: string) {
+        const url = `${this.baseUrl}/post/${id}`;
+        // Подобна логика за fetchByUrl
+        console.log(`Fetching post with ID: ${id}`);
     }
 }

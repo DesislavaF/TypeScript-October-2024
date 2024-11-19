@@ -7,15 +7,11 @@ import { HtmlUtil } from './utils/html';
 const { baseURL } = CONFIG;
 
 const userService = new UserService(baseURL);
-userService.fetchPosts(); 
-
 const postService = new PostService(baseURL);
-postService.fetchPostById('1'); 
+
 
 const app = document.querySelector<HTMLDivElement>('#app');
+HtmlUtil.render(app);
 
-if (app) {
-    HtmlUtil.render(app);
-} else {
-    console.error("Element #app not found.");
-}
+
+
